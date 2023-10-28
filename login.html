@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Login</h1>
+    <form action="Officals.html" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required><br><br>
+
+        <!-- <label for="age">Age:</label>
+        <input type="number" id="age" required><br><br> -->
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required><br><br>
+
+        <input type="submit" value="Login"> <div class="link">
+    </form>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Retrieve values from the form
+            const username = document.getElementById("username").value;
+            const age = document.getElementById("age").value;
+            const dob = document.getElementById("dob").value;
+            const password = document.getElementById("password").value;
+
+            // Here, you can perform validation, connect to a server, and perform authentication
+
+            // For a real application, send this data to a server for authentication
+            // Example using fetch:
+            // fetch('/login', {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json'
+            //     },
+            //     body: JSON.stringify({ username, age, dob, password })
+            // })
+            // .then(response => {
+            //     if (response.status === 200) {
+            //         // Authentication successful
+            //         console.log("Authentication successful");
+            //     } else {
+            //         // Authentication failed
+            //         console.log("Authentication failed");
+            //     }
+            // })
+        });
+    </script>
+</body>
+</html>
